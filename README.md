@@ -1,10 +1,6 @@
 # go-issue-27900
 
-Upstream [issue](https://github.com/golang/go/issues/27900).
-
-Go list [docs](https://pkg.go.dev/cmd/go#hdr-Package_lists_and_patterns).
-
-Example of where
+This module is an example of where
 ```
 > go list -m all
 go-issue-27900
@@ -23,3 +19,17 @@ contains a module (`github.com/yuin/goldmark`) which is not needed for the outpu
 > go list all | grep github.com/yuin/goldmark
 [empty]
 ```
+and is not explained by
+```
+> go mod why -m github.com/yuin/goldmark
+# github.com/yuin/goldmark
+(main module does not need module github.com/yuin/goldmark)
+```
+
+Output from `go version go1.22.5 linux/amd64`.
+
+## References
+
+Upstream [issue](https://github.com/golang/go/issues/27900).
+
+Go list [docs](https://pkg.go.dev/cmd/go#hdr-Package_lists_and_patterns).
