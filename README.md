@@ -1,5 +1,7 @@
 # go-issue-27900
 
+Upstream [issue](https://github.com/golang/go/issues/27900).
+
 Example of where
 ```
 > go list -m all
