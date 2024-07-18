@@ -2,6 +2,8 @@
 
 Upstream [issue](https://github.com/golang/go/issues/27900).
 
+Go list [docs](https://pkg.go.dev/cmd/go#hdr-Package_lists_and_patterns).
+
 Example of where
 ```
 > go list -m all
